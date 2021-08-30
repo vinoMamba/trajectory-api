@@ -18,8 +18,8 @@ ralis db:create RAILS_ENV=development
 # create User model
 rails g model User full_name:string password_digest:string
 rails db:migrate
+rails g controller api::v1::users
 ```
-
 
 3. 运行单元测试
 
