@@ -13,4 +13,9 @@ class UserTest < ActiveSupport::TestCase
     user = User.new({ full_name: users(:one).full_name, password_digest: '' })
     assert_not user.valid?
   end
+
+  test 'valid: user with valid password' do
+    user = User.new({ full_name: 'vino2', password: '123456' })
+    assert user.valid?
+  end
 end
