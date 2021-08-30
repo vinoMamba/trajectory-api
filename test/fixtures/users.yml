@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: 'vino'
+  password_digest: 123456
+
+two:
+  full_name: 'kobe'
+  password_digest: 123456

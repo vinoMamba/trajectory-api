@@ -14,3 +14,15 @@ docker run --name mysqldb -v /mnt/mysql:/var/mysql -e MYSQL_ROOT_PASSWORD=[passw
 ralis db:create RAILS_ENV=development
 ```
 
+```shell
+# create User model
+rails g model User full_name:string password_digest:string
+rails db:migrate
+```
+
+
+3. 运行单元测试
+
+```shell
+ralis test
+```
