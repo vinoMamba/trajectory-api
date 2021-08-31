@@ -12,4 +12,10 @@ class Api::V1::TokensControllerTest < ActionDispatch::IntegrationTest
     assert_not json_response['data']['token'].blank?
   end
 
+  test "create fail: create token with illegal password" do
+    post api_v1_tokens_path, params: { user: { full_name: @user_one.full_name, password: '123' } },
+         as: :json
+    assert_response 401
+  end
+
 end

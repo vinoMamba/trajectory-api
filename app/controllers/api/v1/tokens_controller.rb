@@ -11,7 +11,7 @@ class Api::V1::TokensController < ApplicationController
     if (JsonWebToken rescue nil)
       token = JsonWebToken.encode(payload, exp_time)
       render json: { error_code: 0, data: { token: token, exp_time: exp_time }, message: "ok" }, status: 201
-      return
+      nil
     else
       head 401
     end
